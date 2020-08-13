@@ -1,0 +1,65 @@
+<!--
+Name:		Bruno Surdi Oliveira
+Date:		November 2019
+Purpose:    Lab 8 - Waste Calculator
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lab 8</title>
+</head>
+
+<body onload="displayProducts(); calculateWaste();">
+
+    <h1>Grocery Store Waste Tracker</h1>
+
+    <!-- Inventory -->
+    <fieldset>
+        <legend>Store Inventory</legend>
+        <form>
+            <!-- Filter-->
+            <p>
+                Filter Products By:
+                <select id="sbProductsFilter" onchange="displayProducts();">
+                    <option selected>All</option>
+                    <option>Expired</option>
+                    <option>Not Expired</option>
+                </select>
+            </p>
+
+            <!-- Products Output -->
+            <span><strong>Department | Product | Price ($) | Shelf Life</strong></span>
+            <div id="productOutput">[Print Products here...]</div>
+        </form>
+    </fieldset>
+    <br>
+
+    <!-- Waste Calculator -->
+    <fieldset>
+        <legend>Waste Calculator</legend>
+        <form>
+            <!-- Filter -->
+            <p>
+                Calculate Waste By Department:
+                <select id="sbDepartmentFilter" onchange="calculateWaste();">
+                    <option selected>Entire Store</option>
+                    <option>Bakery</option>
+                    <option>Dairy</option>
+                    <option>Deli</option>
+                    <option>Produce</option>
+                    <option>Vegan</option>
+                </select>
+            </p>
+
+            <!-- Products Output -->
+            <div id="wasteOutput">[Select a department]</div>
+        </form>
+    </fieldset>
+
+    <!-- Javascript -->
+    <script src="Bruno_Lab8.js">
+    </script>
+</body>
+
+</html>
